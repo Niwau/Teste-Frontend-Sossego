@@ -6,7 +6,7 @@ interface IAction {
     'steps/increment' | 'steps/decrement'|
     'name/set' | 'password/set' | 'passwordConfirm/set' |
     'email/set' | 'birth/set' | 'cep/set' | 'street/set' |
-    'number/set' | 'district/set' | 'city/set' | 'reference/set' | 'about/set'
+    'number/set' | 'district/set' | 'city/set' | 'reference/set' | 'about/set' | 'steps/reset'
   payload?: any
 }
 
@@ -65,6 +65,8 @@ export const FormProvider = ({ children }: Children ) => {
         return { ...state, reference: action.payload }
       case "about/set": 
         return { ...state, about: action.payload }
+        case "steps/reset": 
+        return { ...state, steps: 0 }
       default:
         return state
     }

@@ -7,7 +7,7 @@ export const userFormSchema = yup.object().shape({
   password: 
     yup.string()
       .required('Preencha esse campo')
-      .min(8, 'Sua senha precisa ter no mínimo 8 caracteres')
+      .min(8,  'Sua senha precisa ter no mínimo 8 caracteres')
       .max(32, 'Sua senha precisa ter no máximo 32 caracteres'),
   passwordConfirm:
     yup.string()
